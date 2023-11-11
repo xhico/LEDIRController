@@ -35,18 +35,18 @@
     "white": "07",
     "red": "04",
     "green": "05",
-    "green_low": "09",
+    "green_light": "09",
     "blue": "06",
-    "blue_low": "0A",
+    "blue_light": "0A",
     "cyan": "0D",
     "cyan_high": "11",
     "cyan_green": "15",
     "orange": "08",
-    "orange_low": "0C",
+    "orange_light": "0C",
     "yellow": "14",
     "yellow_high": "10",
     "pink": "16",
     "purple": "0E",
-    "purple_low": "12"
+    "purple_light": "12"
   }
 }
