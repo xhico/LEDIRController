@@ -3,6 +3,8 @@
 
 import json
 import os
+import time
+
 import piir
 import traceback
 import logging
@@ -39,6 +41,7 @@ def main():
         The script validates the number of command-line arguments and logs an error if invalid.
 
     """
+
     # Setup remote
     remote = piir.Remote(configFile, config["PIN_IR"])
 
@@ -52,6 +55,15 @@ def main():
     logger.info("Send IR code: " + btn)
     if btn != "off":
         remote.send("on")
+
+    # Adjust Brightness
+    if btn == "light_min" or btn == "light_max":
+        for _ in range(50):
+            remote.send(btn)
+            time.sleep(0.1)
+        return
+
+    # Send normal color
     remote.send(btn)
 
     return
